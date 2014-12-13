@@ -3,8 +3,8 @@
 module Cymbal
   class << self
     def symbolize(obj)
-      return symbolize_hash if obj.is_a? Hash
-      return symbolize_array if obj.is_a? Array
+      return symbolize_hash(obj) if obj.is_a? Hash
+      return symbolize_array(obj) if obj.is_a? Array
       obj
     end
 

@@ -14,6 +14,14 @@ Convert Ruby hash keys from strings to symbols for easier manipulation
 
 ```
 require 'cymbal'
+x = {
+    'foo' => 1,
+    'bar' => {
+        'cats' => 6,
+        'dogs' => 'better'
+    }
+}
+Cymbal.symbolize(x) # returns {:foo=>1, :bar=>{:cats=>6, :dogs=>"better"}}
 ```
 
 ## Installation
