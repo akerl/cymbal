@@ -15,7 +15,7 @@ module Cymbal
     end
 
     def symbolize_array(array)
-      array.map { symbolize(i) }
+      array.map { |item| symbolize(item) }
     end
   end
 end
