@@ -11,11 +11,20 @@ module Cymbal
     private
 
     def symbolize_hash(hash)
+      check_collisions(hash.keys)
       hash.each_with_object({}) { |(k, v), o| o[k.to_sym] = symbolize(v) }
     end
 
     def symbolize_array(array)
       array.map { |item| symbolize(item) }
+    end
+
+    def check_collisions(keys)
+      symbols, other = keys.partition { |x| x.is_a? Symbol }
+      other.map!(&:to_sym)
+      overlap = other & symbols
+      return if overlap.empty?
+      fail ArgumentError, "Key collision in hash: #{overlap}"
     end
   end
 end
