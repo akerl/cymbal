@@ -24,6 +24,10 @@ x = {
 Cymbal.symbolize(x) # returns {:foo=>1, :bar=>{:cats=>6, :dogs=>"better"}}
 ```
 
+The symbolize call will convert keys recursively and will handle an array of hashes.
+
+If a hash includes keys that would collide (for example, :foo and 'foo'), an ArgumentError will be raised.
+
 ## Installation
 
     gem install cymbal
