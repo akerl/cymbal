@@ -3,9 +3,9 @@ cymbal
 
 [![Gem Version](https://img.shields.io/gem/v/cymbal.svg)](https://rubygems.org/gems/cymbal)
 [![Dependency Status](https://img.shields.io/gemnasium/akerl/cymbal.svg)](https://gemnasium.com/akerl/cymbal)
-[![Code Climate](https://img.shields.io/codeclimate/github/akerl/cymbal.svg)](https://codeclimate.com/github/akerl/cymbal)
-[![Coverage Status](https://img.shields.io/coveralls/akerl/cymbal.svg)](https://coveralls.io/r/akerl/cymbal)
-[![Build Status](https://img.shields.io/travis/akerl/cymbal.svg)](https://travis-ci.org/akerl/cymbal)
+[![Build Status](https://img.shields.io/circleci/project/akerl/cymbal.svg)](https://circleci.com/gh/akerl/cymbal)
+[![Coverage Status](https://img.shields.io/codecov/c/github/akerl/cymbal.svg)](https://codecov.io/github/akerl/cymbal)
+[![Code Quality](https://img.shields.io/codacy/31e5cb840fdc473e9a52ef2a46501a07.svg)](https://www.codacy.com/app/akerl/cymbal)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
 Convert Ruby hash keys from strings to symbols for easier manipulation
