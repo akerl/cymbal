@@ -24,7 +24,7 @@ module Cymbal
       other.map!(&:to_sym)
       overlap = other & symbols
       return if overlap.empty?
-      fail ArgumentError, "Key collision in hash: #{overlap}"
+      raise ArgumentError, "Key collision in hash: #{overlap}"
     end
   end
 end
