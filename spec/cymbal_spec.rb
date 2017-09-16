@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-# rubocop:disable Metrics/BlockLength
 describe Cymbal do
   describe '#symbolize' do
     let(:hash) do

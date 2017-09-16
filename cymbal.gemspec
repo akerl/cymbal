@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name        = 'cymbal'
   s.version     = '1.0.0'
-  s.date        = Time.now.strftime("%Y-%m-%d")
+  s.date        = Time.now.strftime('%Y-%m-%d')
 
   s.summary     = 'Converts hash keys from strings to symbols'
-  s.description = "Allows saner hash key manipulation by converting keys to symbols"
+  s.description = 'Allows saner hash key manipulation by converting keys to symbols' # rubocop:disable Metrics/LineLength
   s.authors     = ['Les Aker']
   s.email       = 'me@lesaker.org'
   s.homepage    = 'https://github.com/akerl/cymbal'
