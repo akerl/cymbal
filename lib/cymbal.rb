@@ -3,28 +3,34 @@
 module Cymbal
   class << self
     def symbolize(obj)
-      return symbolize_hash(obj) if obj.is_a? Hash
-      return symbolize_array(obj) if obj.is_a? Array
+      operate(obj, &:to_sym)
+    end
+
+    def stringify(obj)
+      operate(obj, &:to_s)
+    end
+
+    def operate(obj, &block)
+      return operate_hash(obj, &block) if obj.is_a? Hash
+      return operate_array(obj, &block) if obj.is_a? Array
       obj
     end
 
     private
 
-    def symbolize_hash(hash)
-      check_collisions(hash.keys)
-      hash.each_with_object({}) { |(k, v), o| o[k.to_sym] = symbolize(v) }
+    def operate_hash(hash, &block)
+      hash.each_with_object({}) do |(k, v), o|
+        new_key = yield k
+        o[new_key] = operate(v, &block)
+        if new_key != k && hash.key?(new_key)
+          raise ArgumentError, "Key collision in hash: #{new_key}"
+        end
+        o[new_key] = operate(v, &block)
+      end
     end
 
-    def symbolize_array(array)
-      array.map { |item| symbolize(item) }
-    end
-
-    def check_collisions(keys)
-      symbols, other = keys.partition { |x| x.is_a? Symbol }
-      other.map!(&:to_sym)
-      overlap = other & symbols
-      return if overlap.empty?
-      raise ArgumentError, "Key collision in hash: #{overlap}"
+    def operate_array(array, &block)
+      array.map { |item| operate(item, &block) }
     end
   end
 end
