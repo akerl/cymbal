@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'cymbal'
-  s.version     = '1.0.0'
+  s.version     = '2.0.0'
   s.date        = Time.now.strftime('%Y-%m-%d')
 
   s.summary     = 'Converts hash keys from strings to symbols'
