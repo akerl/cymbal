@@ -22,9 +22,7 @@ module Cymbal
       hash.each_with_object({}) do |(k, v), o|
         new_key = yield k
         o[new_key] = operate(v, &block)
-        if new_key != k && hash.key?(new_key)
-          raise ArgumentError, "Key collision in hash: #{new_key}"
-        end
+        raise(ArgumentError, "Key collision in hash: #{new_key}") if new_key != k && hash.key?(new_key)
         o[new_key] = operate(v, &block)
       end
     end
