@@ -2,7 +2,7 @@ cymbal
 =========
 
 [![Gem Version](https://img.shields.io/gem/v/cymbal.svg)](https://rubygems.org/gems/cymbal)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/akerl/cymbal/Build)](https://github.com/akerl/cymbal/actions)
+[![GitHub Workflow Status](https://img.shields.io/actions/github/workflow/status/akerl/cymbal/build.yml?branch=main)](https://github.com/akerl/cymbal/actions)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
 Convert Ruby hash keys from strings to symbols for easier manipulation
