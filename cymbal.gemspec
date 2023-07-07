@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split
 
   s.add_development_dependency 'goodcop', '~> 0.9.7'
-  s.add_development_dependency 'rake', '~> 13.0.0'
-  s.add_development_dependency 'rspec', '~> 3.11.0'
+  s.add_development_dependency 'rake', '~> 13.0.6'
+  s.add_development_dependency 'rspec', '~> 3.12.0'
   s.metadata['rubygems_mfa_required'] = 'true'
 end
